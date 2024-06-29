@@ -40,6 +40,11 @@ From here, we can begin with the bulk of the mathematics. Currently, our model i
     <td>8</td>
     <td>9</td>
   </tr>
+	<tr>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
 </table>
 
 
