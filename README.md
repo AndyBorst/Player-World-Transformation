@@ -62,14 +62,14 @@ From here, we can begin with the bulk of the mathematics. Currently, our model i
   </tr>
   <tr>
     <td>0</td>
-    <td>cos(&theta)</td>
-    <td>sin(&theta)</td>
+    <td>cos(θ)</td>
+    <td>sin(θ)</td>
 	  <td>0</td>
   </tr>
   <tr>
     <td>0</td>
-    <td>-sin(&theta)</td>
-    <td>cos(&theta)</td>
+    <td>-sin(θ)</td>
+    <td>cos(θ)</td>
 	  <td>0</td>
   </tr>
 	<tr>
@@ -83,9 +83,9 @@ From here, we can begin with the bulk of the mathematics. Currently, our model i
 ### Y Transform matrix
 <table>
   <tr>
-    <td>cos(&theta)</td>
+    <td>cos(θ)</td>
     <td>0</td>
-    <td>-sin(&theta)</td>
+    <td>-sin(θ)</td>
 	  <td>0</td>
   </tr>
   <tr>
@@ -95,9 +95,9 @@ From here, we can begin with the bulk of the mathematics. Currently, our model i
 	  <td>0</td>
   </tr>
   <tr>
-    <td>sin(&theta)</td>
+    <td>sin(θ)</td>
     <td>0</td>
-    <td>cos(&theta)</td>
+    <td>cos(θ)</td>
 	  <td>0</td>
   </tr>
 	<tr>
@@ -110,14 +110,14 @@ From here, we can begin with the bulk of the mathematics. Currently, our model i
 ### Z Rotation matrix
 <table>
   <tr>
-    <td>cos(&theta)</td>
-    <td>sin(&theta)</td>
+    <td>cos(θ)</td>
+    <td>sin(θ)</td>
     <td>0</td>
 	  <td>0</td>
   </tr>
   <tr>
-    <td>-sin(&theta)</td>
-    <td>cos(&theta)</td>
+    <td>-sin(θ)</td>
+    <td>cos(θ)</td>
     <td>0</td>
 	  <td>0</td>
   </tr>
