@@ -9,10 +9,30 @@ While I considered coding this in Python, the allure of using matlab was too ove
 <div>
 	<img src="/images/shark_triangle.png" width="700" >
 </div>
+(Technically this image was created after the object was oriented for the viewer in a later projection, but this makes it easier to visualize and really only changes the orientation from a purely visual perspective)
 
 Because of these considerations, matlab became the natural first choice despite its lower use cases as compared to python or C# in the video game industry. Matlab is great at matrix manipulation, and it's guranteed that will be needed for this project.
 
 ## Mathemtical Background
-Like I said above, the crux of this project is performing a series of transformations
+Like I said above, the crux of this project is performing a series of transformations on the base .raw file for our image of choice. When read into an ide, the .raw file for an image properly formatted into triangular vertex format will display a nine column by x row matrix. The rows are dependent on the surface area of the object. These nine rows denote the X, Y, and Z coordinates of each triangle's vertices:
+
+<div>
+	<img src="/images/raw_read.png" width="700" >
+</div>
+
+Depending on what video game developer base you're working with, there are different conventions for whether to rearrange this data for ease of processing into a layout where the X, Y, and Z coordiantes are the columns, with rows representing a point, or where the X, Y, and Z coordinates are the rows, with the columns representing a point. Since I prefer Unity due to its relatively creator friendly conditions for use, I'll be using the former. 
+
+From here, we can begin with the bulk of the mathematics. Currently, our model is floating in space in reference to its own position, but this serves us no good if we want to put it in a specific world coordinate for the viewer to see. So we will apply a "world transform" to get the model in the correct position and orientation in relation to the world coordinates set at the beginning of the program. From there, we will need to do two more transforms, one to apply a view transformation to move the model into the "eyespace coordinates" of the viewer, and one to apply a projection transformation to move te model into normalized coordinates on the screen. From there, the object has been moved into position, and we can begin adding lighting to create shading, as well as implement a form of Z-culling to remove the plotting of any coordinates behind another. This will eliminate the overshadow effect going on in the above picture! 
+
+\vec{v} = \begin{bmatrix} X \\\ Y \end{bmatrix}
 
 
+
+## Final results
+With all of this done, we now have a finished image! 
+
+<div>
+	<img src="/images/shark_final.png" width="700" >
+</div>
+
+I added some color as well that can be adjusted in the rawReads function of the program. While I used a shark for this project, the program will run on any image that is successfully converted into the .raw triangular vertice format used in this project. Depending on how you create the file, your read conditions may change slightly, which can be adjusted in the worldM function, but for the most part this is a seamless integration for anyone interested!
