@@ -10,5 +10,7 @@ does when it shows a 3D object that can be manipulated by a mouse, but in this p
 While I considered coding this in Python, the allure of using matlab was too overwhelming to pass up. This project is driven almost entirely by matrix manipulation via different 
 "transforms", allowing us to map a .raw file consisiting of an image composed of "raw triangles". Triangles are choosen because they are the simplest polygon, allowing for faster  
 rendering times in an industry that lives and dies by the amount of frames pumped out per second.
-
+<div>
+	<img src="/images/shark_triangle.png" width="100" >
+</div>
 Because of this, matlab became the natural first choice despite its lower use as compared to python or C# in the video game industry. 
