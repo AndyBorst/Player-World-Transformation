@@ -4,10 +4,15 @@ Like many people, I personally enjoy gaming from time to time, and have often wo
 
 ## Pre-coding considerations
 
-While I considered coding this in Python, the allure of using matlab was too overwhelming to pass up. This project is driven almost entirely by matrix manipulation via different "transforms", allowing us to map a .raw file consisiting of an image composed of "raw triangles". Triangles are choosen because they are the simplest polygon, allowing for faster rendering times in an industry that lives and dies by the amount of frames pumped out per second.
+While I considered coding this in Python, the allure of using matlab was too overwhelming to pass up. This project is driven almost entirely by matrix manipulation via different "transforms", allowing us to map a .raw file consisiting of an image composed of "raw triangles". Triangles are choosen because they are the simplest polygon, allowing for faster rendering times in an industry that lives and dies by the amount of frames pumped out per second. I've included the raw mesh image I used for the project below for refrence:
 
 <div>
 	<img src="/images/shark_triangle.png" width="700" >
 </div>
 
-Because of this, matlab became the natural first choice despite its lower use as compared to python or C# in the video game industry. 
+Because of these considerations, matlab became the natural first choice despite its lower use cases as compared to python or C# in the video game industry. Matlab is great at matrix manipulation, and it's guranteed that will be needed for this project.
+
+## Mathemtical Background
+Like I said above, the crux of this project is performing a series of transformations
+
+
