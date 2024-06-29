@@ -107,7 +107,9 @@ From here, we can begin with the bulk of the mathematics. Currently, our model i
 		<td>1</td>
   </tr>
 </table>
+
 ### Z Rotation matrix
+
 <table>
   <tr>
     <td>cos(θ)</td>
