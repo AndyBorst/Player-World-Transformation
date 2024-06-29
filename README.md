@@ -24,7 +24,12 @@ Depending on what video game developer base you're working with, there are diffe
 
 From here, we can begin with the bulk of the mathematics. Currently, our model is floating in space in reference to its own position, but this serves us no good if we want to put it in a specific world coordinate for the viewer to see. So we will apply a "world transform" to get the model in the correct position and orientation in relation to the world coordinates set at the beginning of the program. From there, we will need to do two more transforms, one to apply a view transformation to move the model into the "eyespace coordinates" of the viewer, and one to apply a projection transformation to move te model into normalized coordinates on the screen. From there, the object has been moved into position, and we can begin adding lighting to create shading, as well as implement a form of Z-culling to remove the plotting of any coordinates behind another. This will eliminate the overshadow effect going on in the above picture! 
 
-\vec{v} = \begin{bmatrix} X \\\ Y \end{bmatrix}
+$ \begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+Tx & Ty & Tz & 1 
+\end{bmatrix}  $
 
 
 
