@@ -17,7 +17,7 @@ Because of these considerations, matlab became the natural first choice despite 
 Like I said above, the crux of this project is performing a series of transformations on the base .raw file for our image of choice. When read into an ide, the .raw file for an image properly formatted into triangular vertex format will display a nine column by x row matrix. The rows are dependent on the surface area of the object. These nine rows denote the X, Y, and Z coordinates of each triangle's vertices:
 
 <div>
-	<img src="/images/raw_read.png" width="700" >
+	<img src="/images/raw_read_output.png" width="700" >
 </div>
 
 Depending on what video game developer base you're working with, there are different conventions for whether to rearrange this data for ease of processing into a layout where the X, Y, and Z coordiantes are the columns, with rows representing a point, or where the X, Y, and Z coordinates are the rows, with the columns representing a point. Since I prefer Unity due to its relatively creator friendly conditions for use, I'll be using the former. 
