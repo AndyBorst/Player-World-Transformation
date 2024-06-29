@@ -27,27 +27,27 @@ From here, we can begin with the bulk of the mathematics. Currently, our model i
 <table>
   <tr>
     <td>1</td>
-    <td>2</td>
-    <td>3</td>
-	  <td>3</td>
+    <td>0</td>
+    <td>0</td>
+	  <td>0</td>
   </tr>
   <tr>
-    <td>4</td>
-    <td>5</td>
-    <td>6</td>
-	  <td>3</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+	  <td>0</td>
   </tr>
   <tr>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-	  <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+	  <td>0</td>
   </tr>
 	<tr>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-		<td>3</td>
+    <td>Tx</td>
+    <td>Ty</td>
+    <td>Tz</td>
+		<td>1</td>
   </tr>
 </table>
 
