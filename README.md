@@ -22,8 +22,9 @@ Like I said above, the crux of this project is performing a series of transforma
 
 Depending on what video game developer base you're working with, there are different conventions for whether to rearrange this data for ease of processing into a layout where the X, Y, and Z coordiantes are the columns, with rows representing a point, or where the X, Y, and Z coordinates are the rows, with the columns representing a point. Since I prefer Unity due to its relatively creator friendly conditions for use, I'll be using the former. 
 
-From here, we can begin with the bulk of the mathematics. Currently, our model is floating in space in reference to its own position, but this serves us no good if we want to put it in a specific world coordinate for the viewer to see. So we will apply a "world transform" to get the model in the correct position and orientation in relation to the world coordinates set at the beginning of the program. From there, we will need to do two more transforms, one to apply a view transformation to move the model into the "eyespace coordinates" of the viewer, and one to apply a projection transformation to move te model into normalized coordinates on the screen. From there, the object has been moved into position, and we can begin adding lighting to create shading, as well as implement a form of Z-culling to remove the plotting of any coordinates behind another. This will eliminate the overshadow effect going on in the above picture! 
+From here, we can begin with the bulk of the mathematics. Currently, our model is floating in space in reference to its own position, but this serves us no good if we want to put it in a specific world coordinate for the viewer to see. So we will apply a "world transform" to get the model in the correct position and orientation in relation to the world coordinates set at the beginning of the program. This transform consists of multiplying our model matrix by a transform matrix and three rotation matrices, for the X, Y, and Z axis. Keep in mind that the order of rotation does matter! So make sure you're consistent.
 
+### Transform matrix
 <table>
   <tr>
     <td>1</td>
@@ -51,7 +52,90 @@ From here, we can begin with the bulk of the mathematics. Currently, our model i
   </tr>
 </table>
 
+### X Rotation matrix
+<table>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+	  <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>cos(&theta)</td>
+    <td>sin(&theta)</td>
+	  <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>-sin(&theta)</td>
+    <td>cos(&theta)</td>
+	  <td>0</td>
+  </tr>
+	<tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+		<td>1</td>
+  </tr>
+</table>
 
+### Y Transform matrix
+<table>
+  <tr>
+    <td>cos(&theta)</td>
+    <td>0</td>
+    <td>-sin(&theta)</td>
+	  <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+	  <td>0</td>
+  </tr>
+  <tr>
+    <td>sin(&theta)</td>
+    <td>0</td>
+    <td>cos(&theta)</td>
+	  <td>0</td>
+  </tr>
+	<tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+		<td>1</td>
+  </tr>
+</table>
+### Z Rotation matrix
+<table>
+  <tr>
+    <td>cos(&theta)</td>
+    <td>sin(&theta)</td>
+    <td>0</td>
+	  <td>0</td>
+  </tr>
+  <tr>
+    <td>-sin(&theta)</td>
+    <td>cos(&theta)</td>
+    <td>0</td>
+	  <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+	  <td>0</td>
+  </tr>
+	<tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+		<td>1</td>
+  </tr>
+</table>
+
+From there, we will need to do two more transforms, one to apply a view transformation to move the model into the "eyespace coordinates" of the viewer, and one to apply a projection transformation to move te model into normalized coordinates on the screen. From there, the object has been moved into position, and we can begin adding lighting to create shading, as well as implement a form of Z-culling to remove the plotting of any coordinates behind another. This will eliminate the overshadow effect going on in the above picture! 
 
 ## Final results
 With all of this done, we now have a finished image! 
